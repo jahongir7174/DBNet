@@ -98,12 +98,12 @@ def weight_decay(model):
             else:
                 p2.append(p)  # weight (with decay)
     return [{'params': p1, 'weight_decay': 0.00},
-            {'params': p2, 'weight_decay': 1E-4}]
+            {'params': p2, 'weight_decay': 2E-4}]
 
 
 def mask_to_box(targets, outputs, threshold=0.3, is_polygon=False):
     min_size = 3
-    box_threshold = 0.65
+    box_threshold = 0.6
     max_candidates = 100
 
     segmentation = outputs > threshold
