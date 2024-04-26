@@ -278,11 +278,6 @@ def main():
     if args.demo:
         demo(args)
 
-    image = cv2.imread('./demo/demo.jpg', cv2.IMREAD_COLOR)
-    h, w = image.shape[:2]
-    x = cv2.resize(image, dsize=(w // 4, h // 4))
-    cv2.imwrite('./demo/demo.jpg', x)
-
 
 if __name__ == "__main__":
     main()
